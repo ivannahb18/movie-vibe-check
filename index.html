@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Vibe Check</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="page" aria-hidden="true">
+      <div class="spotlight spotlight--left"></div>
+      <div class="spotlight spotlight--right"></div>
+      <div class="grain"></div>
+    </div>
+
+    <header class="site-header">
+      <p class="eyebrow">Tonight’s pick</p>
+      <h1 class="site-title">Movie Vibe Check</h1>
+    </header>
+
+    <main class="main">
+      <article class="card" aria-labelledby="card-heading">
+        <div class="card__inner">
+          <header class="card__header">
+            <h2 id="card-heading" class="card__title">Look up a film</h2>
+            <p class="card__subtitle">
+              Search by title — we’ll add the vibe breakdown in the next step.
+            </p>
+          </header>
+
+          <div class="search-block">
+            <label class="field">
+              <span class="field__label">Movie title</span>
+              <input
+                class="field__input"
+                type="search"
+                name="movie-query"
+                placeholder="e.g. Blade Runner 2049"
+                autocomplete="off"
+              />
+            </label>
+            <button class="btn btn--primary" type="button">
+              Check vibe
+            </button>
+          </div>
+
+          <section class="preview" aria-label="Result preview (layout only)">
+            <div class="preview__poster" role="img" aria-label="Poster placeholder">
+              <span class="preview__poster-text">Poster</span>
+            </div>
+            <div class="preview__body">
+              <p class="preview__meta">Year · Director</p>
+              <h3 class="preview__title">Film title appears here</h3>
+              <p class="preview__tagline">
+                Tagline or short logline will sit in this space once we wire up
+                the API.
+              </p>
+              <ul class="vibe-chips" aria-label="Vibe tags (placeholder)">
+                <li class="vibe-chips__item">Mood</li>
+                <li class="vibe-chips__item">Pacing</li>
+                <li class="vibe-chips__item">Tone</li>
+              </ul>
+            </div>
+          </section>
+        </div>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <p>Layout preview — logic comes next.</p>
+    </footer>
+
+    <script src="js/app.js" defer></script>
+  </body>
+</html>
